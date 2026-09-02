@@ -16,7 +16,6 @@ import { style } from "./styles";
 import Logo from '../../assets/logo.png';
 import { MaterialIcons } from '@expo/vector-icons';
 import { themas } from "../../global/themes";
-import { Input } from "../../components/input";
 
 
 export default function Login(){
@@ -69,8 +68,6 @@ export default function Login(){
 
             <View style={style.boxMid}>
 
-                <Input></Input>
-
                 <Text style={style.titleInput}>Endereço de e-mail</Text>
 
                 <View style={style.BoxInput}>
@@ -104,7 +101,7 @@ export default function Login(){
                 <TouchableOpacity style={style.button} onPress={()=>getLogin()}>
                     {
                         loading?
-                            <ActivityIndicator color={'FFFF'} size={'small'}/>
+                            <ActivityIndicator color={'#FFF'} size={'small'}/>
                             :
                             <Text style={style.textButton}>Entrar</Text>
 
