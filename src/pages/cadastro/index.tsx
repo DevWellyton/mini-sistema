@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
-import {
-  Alert,
-  SafeAreaView,
-  StatusBar,
-  Text,
-  TouchableOpacity,
-  View
-} from 'react-native';
+import { Alert, Text, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
+import { Button } from '../../components/button';
+import { Input } from '../../components/input';
 import { tokens } from '../../global/tokens';
 import { style } from './styles';
-import { Input } from '../../components/input';
 
 export default function Cadastro() {
   const [nome, setNome] = useState('');
@@ -27,9 +21,7 @@ export default function Cadastro() {
   };
 
   return (
-    <SafeAreaView style={style.container}>
-      <StatusBar barStyle="dark-content" backgroundColor={tokens.colors.background} />
-
+    <View style={style.container}>
       <View style={style.content}>
         <View style={style.header}>
           <MaterialCommunityIcons
@@ -37,7 +29,7 @@ export default function Cadastro() {
             size={56}
             color={tokens.colors.primary}
           />
-          <Text style={style.headerTitle}>Novo Produto</Text>
+          <Text style={style.headerSubtitle}>Preencha os dados do novo item</Text>
         </View>
 
         <View style={style.form}>
@@ -88,15 +80,9 @@ export default function Cadastro() {
             }
           />
 
-          <TouchableOpacity
-            style={style.button}
-            activeOpacity={0.8}
-            onPress={handleCadastrar}
-          >
-            <Text style={style.buttonText}>CADASTRAR PRODUTO</Text>
-          </TouchableOpacity>
+          <Button title="CADASTRAR PRODUTO" onPress={handleCadastrar} />
         </View>
       </View>
-    </SafeAreaView>
+    </View>
   );
 }

@@ -17,35 +17,14 @@ export const style = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 40
   },
-  headerTitle: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: tokens.colors.textDark,
-    marginLeft: 12
+  headerSubtitle: {
+    flex: 1,
+    marginLeft: 12,
+    fontSize: 15,
+    lineHeight: 20,
+    color: tokens.colors.textMuted
   },
   form: {
     gap: 24
-  },
-  button: {
-    backgroundColor: tokens.colors.primary,
-    height: 52,
-    borderRadius: 6,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 12,
-    elevation: 4,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84
-  },
-  buttonText: {
-    color: tokens.colors.white,
-    fontSize: 15,
-    fontWeight: 'bold',
-    letterSpacing: 0.5
   }
 });
